@@ -5,7 +5,7 @@ import br.com.samarni.model.Cliente;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		 
 		Cliente cliente = new Cliente("00022233311", "Teste 7", "Rua do Teste, 1730", 
 				"Paulista", "PE", "(81)99844-5566"," ");
@@ -15,6 +15,14 @@ public class Main {
 		clienteDao.salvar(cliente);
 		
 		System.out.println("\nLista de Clientes:");
+		//Listando Clientes
+		for(Cliente c : ClienteDAO.getClientes()){
+			System.out.println("Cliente: " + c.getNome());
+		}
+		
+		//clienteDao.updateNomeCliente("TESTE", (short)1);
+		
+		System.out.println("\nLista de Clientes - Atualizada:");
 		//Listando Clientes
 		for(Cliente c : ClienteDAO.getClientes()){
 			System.out.println("Cliente: " + c.getNome());

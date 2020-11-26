@@ -8,7 +8,7 @@ public class Cliente {
 	private String uf;
 	private String telefone;
 	private String observacao;
-	//private int codigo;
+	private short codigo;
 	//Construtor
 	public Cliente(String cpf, String nome, String endereco, String cidade, String uf, 
 			String telefone, String observacao){
@@ -19,7 +19,6 @@ public class Cliente {
 		this.cidade = cidade;
 		this.uf = uf;
 		this.telefone = telefone;
-		//this.codigo = codigo;
 	}
 	
 	//Construtor Simples
@@ -28,6 +27,10 @@ public class Cliente {
 	}
 	
 	//Getters
+	
+	public String getCodigo() {
+		return this.cpf;
+	}
 	
 	public String getCpf() {
 		return this.cpf;
@@ -58,6 +61,11 @@ public class Cliente {
 	}
 	
 	//Setters
+	
+	public void setCodigo(short codigo) {
+		this.codigo = codigo;
+	}
+	
 	public void setCpf (String cpf) {
 		this.cpf = cpf;
 	}

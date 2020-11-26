@@ -3,6 +3,7 @@ package br.com.samarni.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -107,5 +108,45 @@ public class ClienteDAO {
 			}
 		}
 		return clientes;
+	}
+	
+	public void updateNomeCliente(String nome, short codigo) throws Exception {
+		String updateNome = "UPDATE CLIENTE SET NOME_CLI = ? WHERE COD_CLI = ?;";
+	
+		
+		Connection conn = null;
+
+		PreparedStatement pstm = null;
+	
+		
+		//Tentando conectar ao banco
+		
+		try {
+			conn = ConnectionFactory.createConnectionToMySQL();
+			
+			pstm = (PreparedStatement)conn.prepareStatement(updateNome);
+			
+			pstm.setString(1, nome);
+			pstm.setShort(2, codigo);
+			
+			pstm.execute();
+			System.out.println("Cadastro atualizado.");
+			
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}finally {
+				try {
+					if(pstm!=null) {
+						pstm.close();
+					}
+					
+					if(conn!=null) {
+						conn.close();
+					}
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		
 	}
 }
