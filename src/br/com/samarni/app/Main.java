@@ -7,8 +7,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		 
-		Cliente cliente = new Cliente("00077733311", "Teste de Oliveira", "Rua do Teste, 30", 
-				"Recife", "PE", "(81)3344-5566"," ");
+		Cliente cliente = new Cliente("00022233311", "Teste 7", "Rua do Teste, 1730", 
+				"Paulista", "PE", "(81)99844-5566"," ");
 		
 		ClienteDAO clienteDao = new ClienteDAO();
 		

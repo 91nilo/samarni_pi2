@@ -13,7 +13,7 @@ public class ConnectionFactory {
 	
 	//Conexão com o banco
 	public static Connection createConnectionToMySQL() throws Exception{
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		
 		//Conectando com o banco
 		Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
