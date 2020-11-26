@@ -111,7 +111,7 @@ public class ClienteDAO {
 		return clientes;
 	}
 	
-	public void updateNomeCliente(String nome, short codigo) throws Exception {
+	public void updateNomeCliente(String nome, int codigo) throws Exception {
 		String updateNome = "UPDATE CLIENTE SET NOME_CLI = ? WHERE COD_CLI = ?;";
 	
 		
@@ -128,7 +128,7 @@ public class ClienteDAO {
 			pstm = (PreparedStatement)conn.prepareStatement(updateNome);
 			
 			pstm.setString(1, nome);
-			pstm.setShort(2, codigo);
+			pstm.setInt(2, codigo);
 			
 			pstm.execute();
 			System.out.println("Cadastro atualizado.");
@@ -151,7 +151,7 @@ public class ClienteDAO {
 		
 	}
 	
-	public void deletarCliente(short codigo) throws Exception {
+	public void deletarCliente(int codigo) throws Exception {
 		String updateNome = "DELETE FROM CLIENTE WHERE COD_CLI = ?;";
 	
 		
@@ -168,7 +168,7 @@ public class ClienteDAO {
 			pstm = (PreparedStatement)conn.prepareStatement(updateNome);
 			
 			//pstm.setString(1, nome);
-			pstm.setShort(1, codigo);
+			pstm.setInt(1, codigo);
 			
 			pstm.execute();
 			System.out.println("\nCliente deletado.");

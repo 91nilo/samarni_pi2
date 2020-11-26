@@ -20,9 +20,9 @@ public class Main {
 			System.out.println("Cliente: " + c.getNome());
 		}
 		
-		//clienteDao.updateNomeCliente("TESTE 12", (short)11);
+		//clienteDao.updateNomeCliente("Teste Rodrigues", 5);
 		
-		//clienteDao.deletarCliente((short)10);
+		//clienteDao.deletarCliente(9);
 		
 		System.out.println("\nLista de Clientes - Atualizada:");
 		//Listando Clientes
