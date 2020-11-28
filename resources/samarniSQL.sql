@@ -30,3 +30,13 @@ CREATE TABLE if not exists TIPO_COLABORADOR (
  nome_tipocolab varchar(30) NOT NULL,
  observacao_tipocolab varchar(60) 
  );
+ 
+ CREATE TABLE if not exists USUARIO (
+cod_usuario varchar(6) NOT NULL PRIMARY KEY auto_increment,
+nome_usuario varchar(50) NOT NULL,
+cpf_usuario varchar(14),
+login_usuario varchar(10) NOT NULL,
+senha_usuario varchar(12) NOT NULL,
+observacao_usuario varchar(100) 
+) ;
+ 
