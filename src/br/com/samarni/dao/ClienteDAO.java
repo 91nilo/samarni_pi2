@@ -13,7 +13,7 @@ import br.com.samarni.model.Cliente;
 public class ClienteDAO {
 	//classe responsável pelo CRUD
 	
-	
+//comentario teste	
 	public void salvar(Cliente cliente) {
 		String insertCliente = "INSERT INTO CLIENTE (cpf_cli, nome_cli, endereco_cli, cidade_cli, uf_cli, fone_cli, observacao_cli)"
 				+ "	VALUES (?, ?, ?, ?, ?, ?, ?);";
@@ -152,7 +152,7 @@ public class ClienteDAO {
 	}
 	
 	public void deletarCliente(int codigo) throws Exception {
-		String updateNome = "DELETE FROM CLIENTE WHERE COD_CLI = ?;";
+		String deletarNome = "DELETE FROM CLIENTE WHERE COD_CLI = ?;";
 	
 		
 		Connection conn = null;
@@ -165,7 +165,7 @@ public class ClienteDAO {
 		try {
 			conn = ConnectionFactory.createConnectionToMySQL();
 			
-			pstm = (PreparedStatement)conn.prepareStatement(updateNome);
+			pstm = (PreparedStatement)conn.prepareStatement(deletarNome);
 			
 			//pstm.setString(1, nome);
 			pstm.setInt(1, codigo);

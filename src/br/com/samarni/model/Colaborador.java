@@ -8,7 +8,7 @@ public class Colaborador {
 	private String telefone;
 	
   //Construtor
-	public Colaborador(int codigo, String nome, String funcao, String cpf, String telefone) {
+	public Colaborador(String nome, String funcao, String cpf, String telefone) {
 		this.nome = nome;
 		this.funcao = funcao;
 		this.cpf = cpf;

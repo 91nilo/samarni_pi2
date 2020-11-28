@@ -7,8 +7,8 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		 
-		/*Cliente cliente = new Cliente("00022233311", "Teste 7", "Rua do Teste, 1730", 
-				"Paulista", "PE", "(81)99844-5566"," ");
+		/*Cliente cliente = new Cliente("00022233311", "Teste Agora", "Rua do Teste, 1730", 
+				"Jaboatão dos Guararapes", "PE", "(81)99854-5566"," ");
 		*/
 		ClienteDAO clienteDao = new ClienteDAO();
 		
