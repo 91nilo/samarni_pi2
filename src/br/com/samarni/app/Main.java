@@ -1,5 +1,7 @@
 package br.com.samarni.app;
+import br.com.samarni.dao.FornecedorDAO;
 import br.com.samarni.dao.UsuarioDAO;
+import br.com.samarni.model.Fornecedor;
 import br.com.samarni.model.Usuario;
 
 public class Main {
@@ -33,7 +35,7 @@ public class Main {
 		UsuarioDAO usrDAO = new UsuarioDAO();
 			/*Usuario usuario = new Usuario("Teste", "00031155599","smrnTeste", "123456","Administrador");
 			
-			usrDAO.salvar(usuario); */
+			usrDAO.salvar(usuario);
 			
 			System.out.println("\nLista de Usuarios:");
 			//Listando Clientes
@@ -46,6 +48,24 @@ public class Main {
 					System.out.println("Usuario: " + u.getNome());
 				
 			}
+			 */
+		
+				FornecedorDAO frnDAO = new FornecedorDAO();
+				//Fornecedor fornecedor = new Fornecedor("00031155599199", "Fornecedor Teste", "Rua do Teste, 440", "Recife","PE","8122223434", "temporário");
+				//cnpj_for, nome_for, endereco_for, cidade_for, "
+				//+ "uf_for, fone_for, observacao_for
+				//frnDAO.salvar(fornecedor);
+				
+				//Listando Clientes
+			
+					//frnDAO.updateNomeFornecedor("Teste 1", 1);
+					frnDAO.deletarFornecedor(1);
+					System.out.println("\nLista de Fornecedores atualizada:");
+					//Listando Clientes
+					for(Fornecedor f : FornecedorDAO.getFornecedor()){
+						System.out.println("Fornecedor: " + f.getNome());
+					
+				}		
 		}
 	
 	}	
